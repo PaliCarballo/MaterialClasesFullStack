@@ -1,0 +1,47 @@
+GIT GITHUB
+Ejecutar / CMD
+
+ls <!-- para listar los archivos que hay en mi carpeta -->
+cd <!-- para entrar a otra carpeta -->
+cd .. <!-- para salir de esa carpeta -->
+cd ~ <!-- para volver al home del usuario -->
+elijo mi carpeta y listo los archivos nuevamente
+mkdir <!-- crea una carpeta -->
+mv <!-- muevo un archivo & espacio + nombreDeLaCarpeta -->
+touch <!-- crea un archivo vacio -->
+mv archivo.bla cambionombre.bla <!-- para renombrar archivo-->
+rm <!-- elimina archivos -->
+rm -r <!-- elimina carpeta -->
+clear <!-- limpio la consola -->
+
+PARA ENTRAR REMOTAMENTE
+ssh root@NumeroDeIP
+password
+
+GIT <!-- Crear usuario en github.com y descargar GIT en git-scm.com -->
+Usuario: PaliCarballo
+Password: pali1256521
+
+git init <!-- codigo para iniciar git en la carpeta donde me encuentro SE HACE SOLO UNA VEZ POR PROYECTO-->
+git config user.name "MiNombre" <!-- configuro mi nombre -->
+git config usera.email "miEmail" <!-- configuro mi email -->
+CREO UN NUEVO REPOSITORIO EN GIT
+git remote add origin (copio la url que me da git") <!-- para vincularlo con el git remoto -->
+git add (espacio . & -- all ) <!-- subo TODOS los archivos de la carpeta al repositorio -->
+git commit -m "Mensaje" <!-- me aseguro de que la carpeta esta preparada para subirse y agrego un mensaje del cambio que hice -->
+git push irigin master <!-- para subir los archivos -->
+MiUsuario
+MiPassword
+
+Una vez que estan subidos si hago cambios o elimino archios en mi maquina los veo con
+git status
+git add (ruta del nombre del archivo) <!-- vuelvo a subir el archivo modificado -->
+
+PASOS PARA SUBIR ARCHVIOS
+Git add + Git commit + Git push
+
+PASOS PARA DESCARGAR ARCHIVOS (que otro subio)
+git clone (ruta del proyecto que quiero clonar) <!-- me lo descargo a mi maquina -->
+
+y antes de subir un nuevo archivo en un proyecto compartido
+git pull origin master <!-- me descargo lo q hizo mi compañero -->
