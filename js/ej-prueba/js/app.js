@@ -68,13 +68,13 @@ var misDatos = {
     edad : 27,
 }
 
-for (var key in misDatos){
-    console.log(misDatos[key]);
+// for (var key in misDatos){
+//     console.log(misDatos[key]);
 
-    saludar : function() {
-        return "Hola mi nombre es" + this.nombre + "y tengo" + this.edad + "años"
-    }
-}
+//     saludar : function() {
+//         return "Hola mi nombre es" + this.nombre + "y tengo" + this.edad + "años"
+//     }
+// }
 
 
  
