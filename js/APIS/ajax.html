@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>AJAX</title>
+
+  </head>
+
+  <body>
+
+  <h1>Bienvenidos a DH</h1>
+
+<ul>
+
+
+
+</ul>
+
+    <script>
+        function verComisiones(id){
+            fetch("https://dev.digitalhouse.com/api/getComisiones")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(datos){
+                console.log(datos);
+                var ul = document.querySelector('ul.comisiones');
+                li.innerHTML = '';
+                for (var i = 0; i < datos.data.length; i++){
+                    if(datos.data[i].curso_id == id){
+                        var li = document.createElement('li');
+                        li.innerHTML = '<a href="#" onclick="verVacantes('+ datos.data[i].id +');"> '+ datosCurso +' </a>';
+                    }
+                }
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        }
+
+      fetch("https://dev.digitalhouse.com/api/getCursos")
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(datos){
+        console.log(datos);
+        var ul = document.querySelector('ul');
+        for (var i = 0; i < datos.data.length; i++) {
+          console.log(datos.data[i].curso)
+          var li = document.createElement('li');
+          var datosCurso = datos.data[i].curso;
+          li.innerHTML = '<a href="#" onclick="verComisiones('+ datos.data[i].id +');"> '+ datosCurso +' </a>';
+          ul.append(li);
+        }
+      })
+      .catch(function(error){
+        console.log(error);
+      });
+
+
+      
+
+    </script>
+
+  </body>
+
+</html>
