@@ -152,7 +152,7 @@ if($request->file('poster')) {
   }
 
     // creo el acceso directo de la ruta
-    php artisan storage link
+    php artisan storage:link
     
     // en el src de la img agrego ese link
     src="/storage/{{$peli->poster}}"
